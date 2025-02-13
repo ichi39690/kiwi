@@ -1,0 +1,122 @@
+@charset "utf-8";
+@media (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+    div.back {
+        width: 90%;
+        height: 100vh;
+    }
+    .option {
+        flex: 1 1 100%; /* スマホの場合、ボタンは1列に表示 */
+    }
+}
+body {
+    background-position: center;
+    background-size: cover;
+    background-image: url(images/background118.jpg);
+    font-family: "Kiwi Maru", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+main {
+    background-color: #F6F6AE;
+    width: 840px;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+#question_section {
+    background-color: rgb(255, 255, 255, 0.6);
+    width: 420px;
+    height: 100vh;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#question_title {
+    background-color: #fff;
+    text-align: center;
+    color: #9ba74f;
+    font-size: 24px;
+    width: 40%;
+    border: 4px solid #9ba74f;
+    border-radius: 20%;
+    padding: 10px;
+    font-weight: 600;
+    margin: 0 auto;
+    position: absolute;
+    top: 45px;
+    left: 30px;
+}
+
+img {
+    width: 230px;
+    height: 270px;
+    position: absolute;
+    top: 110px;
+    right: 0px;
+    z-index: -1;
+}
+#option_button {
+    position: absolute;
+    top: 43%;
+    left: 59%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+
+}
+.option {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 80%;
+    padding: 5%;
+    background-color: #CFDE67;
+    border: 1px solid #CFDE67;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 11px;
+}
+
+h2.back_relation {
+    background-color: #CFDE67;
+    padding: 15px 27px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 25px;
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 475px;
+    left: 259px;
+}
+.result-question #option_button {
+    width: 180px;
+    position: absolute;
+    top: 88%;
+    left: 34%;
+}
+
+.result-question .option {
+    display: flex;  /* flexboxで横並びにする */
+    justify-content: center;  /* 横並びで中央揃え */
+    gap: 10px;  /* ボタン間の隙間 */
+    flex-wrap: wrap;
+    display: block;
+    float: left;
+    width: auto;
+    padding: 15px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #CFDE67;
+    margin: auto 30px auto auto;
+}
