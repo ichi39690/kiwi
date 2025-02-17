@@ -83,8 +83,6 @@
             function nextquestion(category, answer) {
                 // ユーザーの選択を answers に格納
                 answers[category] = answer;
-                //画像のid名を代入 
-                const imagekiwi = document.getElementById("imagekiwi");
                 // 質問の進行に従って次の質問を表示
                 if (category === 'relation') {
                     showquestion('hobby');
@@ -131,7 +129,7 @@
             window.onload = function() {
                 showquestion('relation');
             };
-
+            // 画像が変わる
             const images = ['images/base_kiwi.png', 'images/gokigenn_kiwi.png', 'images/odoroki_kiwi.png', 'images/osyare_kiwi.png', 'images/utagai_kiwi.png', 'images/kyurukuru_kiwi.png', 'images/hirameki_kiwi.png', 'images/kanasimi_kiwi.png'];
             let current = 0;
 
@@ -142,9 +140,13 @@
                     pageNum();
                 }
             }
+            // 戻るボタンが出る
             function pageNum() {
                 const backbutton = document.getElementById('back')
                 backbutton.innerHTML = `<p>←もどる</p>`;
+                backbutton.addEventListener('click', function() {
+                    ('ボタンがクリックされました')
+                });
                 
             }
             document.getElementById('option_button').onclick = function() {
